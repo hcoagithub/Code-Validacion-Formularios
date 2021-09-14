@@ -26,34 +26,34 @@
                   <p class=" alert alert-danger border rounded m-3 p-3"><strong>Some fields are missing</strong></p>
 
                     <div class="form-row">
-                      <div class="col-5 ml-3 p-2">
+                      <div class="col-md-5 ml-3 mr-3 pt-2">
                         <label for="validation"><h6>Card#</h6></label>
                         <input type="text" class="form-control"  placeholder="XXXXXXXXXXXXXX" value="">
                       </div>
 
-                      <div class="col-2 ml-4 mr-1 p-2">
+                      <div class="col-md-3 ml-3 mr-3 pt-2">
                         <label for="validation"><h6>CVC#</h6></label>
                         <input type="text" class="form-control"  placeholder="0000" value="">
            
                       </div>
 
-                      <div class="col-4 ml-4 mr-3 p-2">
+                      <div class="col-md ml-3 mr-3 pt-2">
                         <label for="validation"><h6>Amount</h6></label>
-                        <div class="input-group">
-                         <strong>$</strong><input type="text" class="form-control"  placeholder="Amount">
-                        </div>
+                        
+                        <input type="text" class="form-control"  placeholder="Amount">
+                        
                       </div>
 
                     </div>
 
                     <div class="form-row  ">
 
-                      <div class="col-6 ml-3 p-2">
+                      <div class="col-md-6 mr-3 ml-3 pt-2">
                         <label for="validation"><h6>First Name</h6></label>
                         <input type="text" class="form-control"  placeholder="">
                       </div>
 
-                      <div class="col ml-2 mr-3 p-2">
+                      <div class="col-md mr-3 ml-3 pt-2 ">
                         <label for="validation"><h6>Last Name</h6> </label>
                         <input type="text" class="form-control"  placeholder="">
                       </div>
@@ -62,12 +62,12 @@
                       
                     <div class="form-row ">
 
-                      <div class="col-6 ml-3 p-2">
+                      <div class="col-md-6 ml-3 mr-3 pt-2">
                         <label for="validation"><h6>City</h6></label>
                         <input type="text" class="form-control" placeholder="" value="" >
                       </div>
 
-                      <div class="col ml-2 p-2">
+                      <div class="col-md ml-3 mr-3 pt-2">
                         <label for="validation"><h6>State</h6></label>
                         <select class="custom-select" id="FormCustomSelect">
                           <option selected>Pick a state</option>
@@ -78,7 +78,7 @@
 
                          </div>
                       
-                      <div class="col ml-2 mr-3 p-2">
+                      <div class="col-md ml-3 mr-3 pt-2">
                         <label for="validation"><h6>Postal Code</h6></label>
                         <input type="text" class="form-control"  placeholder="" value="">
                       </div>
@@ -88,35 +88,36 @@
 
                       <div class="form-row">
 
-                        <div class="col-6 ml-3 mr-2">
+                        <div class="col-md-6 ml-3 mr-3 pt-2">
                           <label for="validation"><h6>We accept:</h6></label><br>
-                       <div class="btn-group btn btn-secondary role="group" aria-label="Basic example">
-                            <input type="radio" name="master" class="mr-2 ml-2" checked><i class="fa fa-cc-mastercard"></i>
-                            <input type="radio" name="master" class="mr-2 ml-2"><i class="fa fa-cc-visa"></i>
-                            <input type="radio" name="master" class="mr-2 ml-2"><i class="fa fa-cc-diners-club"></i>
-                            <input type="radio" name="master" class="mr-2 ml-2"><i class="fa fa-cc-amex"></i>
+                       <div class=" btn-secondary float-left col-md-6 d-flex justify-content-between rounded p-3" role="group" aria-label="Basic example">
+                            <input type="radio" name="master" class="mr-1" checked><i class="fa fa-cc-mastercard"></i>
+                            <input type="radio" name="master" class="mr-1"><i class="fa fa-cc-visa"></i>
+                            <input type="radio" name="master" class="mr-1"><i class="fa fa-cc-diners-club"></i>
+                            <input type="radio" name="master" class="mr-1"><i class="fa fa-cc-amex"></i>
                        </div>
+                       
                         </div>
   
                         
                         
-                        <div class="col mr-3 ">
+                        <div class="col mr-3 ml-3 pt-2">
                           <label for="validation"><h6>Mesagge</h6></label>
-                          <textarea name="" id="" cols="62" rows="3" class="border border-bg-light rounded"></textarea>
+                          <textarea name="" id="" cols="53" rows="3" class="border border-bg-light rounded col-md"></textarea>
                         <small>Add any notes here.</small>
                         </div>
                       
-
+                        
                        
                           
                         
 
                       </div>
 
-                      <div class="d-flex flex-row-reverse border p-3 mt-5 bg-light">
+                      <div class="btn-group border d-flex justify-content-end p-3 mt-5 bg-light">
                       
-                      <button class="btn btn-primary ml-1">Send</button>
-                      <button class="btn btn-secondary ">Cancel</button>
+                      <button class="btn btn-secondary rounded mr-2">Cancel</button>
+                      <button class="btn btn-primary rounded">Send</button>
                     </div>
 
                       
