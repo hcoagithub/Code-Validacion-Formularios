@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    
 
 
 
@@ -19,92 +19,104 @@
  
             <div class="bg-white pr-5 pl-5 pt-4 pb-4">
 
-                <form class="forms border rounded">
+                <form class="formulario border rounded" id="formulario" method="GET">
 
-                  <h3 class="bg-light border p-2">Payment form example</h3>
+                  <h3 class="bg-light border p-2" id="h3">Payment form example</h3>
 
-                  <p class=" alert alert-danger border rounded m-3 p-3"><strong>Some fields are missing</strong></p>
+                  <p class="alert alert-danger border rounded m-3 p-3" id="alerta"><strong >Debe completar todos los campo para poder continuar.</strong></p>
 
-                    <div class="form-row">
-                      <div class="col-md-5 ml-3 mr-3 pt-2">
-                        <label for="validation"><h6>Card#</h6></label>
-                        <input type="text" class="form-control"  placeholder="XXXXXXXXXXXXXX" value="">
+                    <div class="row formulariogrupo">
+
+                      <div class="col-md-5 ml-3 mr-3 pt-2 formulariocard" id="grupocard">
+                        <label for="card"><h6>Card#</h6></label>
+                     
+                        <input type="text" class="form-control" placeholder="xxxx-xxxx-xxxx-xxxx" value="" name="card" id="card">
+                        <p class="pcard" id="pcard">Campo invalido, esta vacio o no contiene el rango de 6 a 16 numeros de su tarjeta.</p>
+                       
                       </div>
 
-                      <div class="col-md-3 ml-3 mr-3 pt-2">
+                      <div class="col-md-3 ml-3 mr-3 pt-2" id="grupocvc">
                         <label for="validation"><h6>CVC#</h6></label>
-                        <input type="text" class="form-control"  placeholder="0000" value="">
-           
+                        <input type="text" class="form-control"  placeholder="xxx" value="" name="cvc" id="cvc">
+                        <p class="pcvc" id="pcvc">Campo invalido, esta vacio o no contiene los 3 numeros del reverso de su tarjeta.</p>
                       </div>
 
-                      <div class="col-md ml-3 mr-3 pt-2">
+                      <div class="col-md ml-3 mr-3 pt-2" id="grupoamount">
                         <label for="validation"><h6>Amount</h6></label>
-                        
-                        <input type="text" class="form-control"  placeholder="Amount">
-                        
+                        <i class="fa fa-usd" aria-hidden="true"></i>
+                        <input type="text" class="form-control"  placeholder="Amount" name="amount" id="amount">
+                        <p id="pamount">Campo invalido (esta vacio, no contiene un valor monetario o excede los 6 digitos).</p>
                       </div>
 
                     </div>
 
-                    <div class="form-row  ">
+                    <div class="row ">
 
-                      <div class="col-md-6 mr-3 ml-3 pt-2">
+                      <div class="col-md-6 mr-3 ml-3 pt-2" id="grupofirstname">
                         <label for="validation"><h6>First Name</h6></label>
-                        <input type="text" class="form-control"  placeholder="">
+                        <input type="text" class="form-control"  placeholder="" name="firstname" id="firstname">
+                        <p id="pfirstname">Campo invalido, esta vacio o no cumple con las caracteristicas de un nombre.</p>
                       </div>
 
-                      <div class="col-md mr-3 ml-3 pt-2 ">
+                      <div class="col-md mr-3 ml-3 pt-2 " id="grupolastname">
                         <label for="validation"><h6>Last Name</h6> </label>
-                        <input type="text" class="form-control"  placeholder="">
+                        <input type="text" class="form-control"  placeholder="" name="lastname" id="lastname" >
+                        <p id="plastname">Campo invalido, esta vacio o no cumple con las caracteristicas de un apellido.</p>
                       </div>
                       
                     </div>
                       
-                    <div class="form-row ">
+                    <div class="row ">
 
-                      <div class="col-md-6 ml-3 mr-3 pt-2">
+                      <div class="col-md-6 ml-3 mr-3 pt-2" id="grupocity">
                         <label for="validation"><h6>City</h6></label>
-                        <input type="text" class="form-control" placeholder="" value="" >
+                        <input type="text" class="form-control" placeholder="" value="" name="city" id="city" >
+                        <p id="pcity">Campo invalido, esta vacio o no agrego una ciudad.</p>
                       </div>
 
-                      <div class="col-md ml-3 mr-3 pt-2">
+                      <div class="col-md ml-3 mr-3 pt-2"  id="lista">
                         <label for="validation"><h6>State</h6></label>
-                        <select class="custom-select" id="FormCustomSelect">
-                          <option selected>Pick a state</option>
+                        <select class="custom-select" id="Select">
+                          <option selected id="select">Pick a state</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
                           <option value="3">Three</option>
+                         
                         </select>
-
+                        <p id="pselect">Debe seleccionar una elemento</p>
                          </div>
                       
-                      <div class="col-md ml-3 mr-3 pt-2">
+                      <div class="col-md ml-3 mr-3 pt-2" id="grupopostalcode">
                         <label for="validation"><h6>Postal Code</h6></label>
-                        <input type="text" class="form-control"  placeholder="" value="">
+                        <input type="text" class="form-control"  placeholder="" value="" name= "postalcode" id= "postalcode">
+                        <p id="ppostalcode">Campo invalido, esta vacio o no agrego un codigo postal correcto ( de 4 a 7 digitos).</p>
                       </div>
 
                       </div>
 
 
-                      <div class="form-row">
+                      <div class="row">
 
                         <div class="col-md-6 ml-3 mr-3 pt-2">
+                         
                           <label for="validation"><h6>We accept:</h6></label><br>
-                       <div class=" btn-secondary float-left col-md-6 d-flex justify-content-between rounded p-3" role="group" aria-label="Basic example">
-                            <input type="radio" name="master" class="mr-1" checked><i class="fa fa-cc-mastercard"></i>
-                            <input type="radio" name="master" class="mr-1"><i class="fa fa-cc-visa"></i>
-                            <input type="radio" name="master" class="mr-1"><i class="fa fa-cc-diners-club"></i>
-                            <input type="radio" name="master" class="mr-1"><i class="fa fa-cc-amex"></i>
+                       <div class=" btn-secondary float-left col-md-6 d-flex justify-content-between rounded p-3"  aria-label="Basic example" id="radios">
+                            <input type="radio"  name="master" value="mastercard" class="mr-1"><i class="fa fa-cc-mastercard"></i>
+                            <input type="radio"  name="master" value="visa" class="mr-1"><i class="fa fa-cc-visa"></i>
+                            <input type="radio" name="master" value="dinnersclub" class="mr-1"><i class="fa fa-cc-diners-club"></i>
+                            <input type="radio" name="master" value="amex" class="mr-1"><i class="fa fa-cc-amex"></i>
+                        
+                            
                        </div>
-                       
+                       <p id="pmaster">Debe seleccionar un metodo de pago.</p>
                         </div>
-  
                         
                         
-                        <div class="col mr-3 ml-3 pt-2">
+                        
+                        <div class="col mr-3 ml-3 pt-2" id="grupomessage">
                           <label for="validation"><h6>Mesagge</h6></label>
-                          <textarea name="" id="" cols="53" rows="3" class="border border-bg-light rounded col-md"></textarea>
-                        <small>Add any notes here.</small>
+                          <textarea name="mensaje" id="mensaje" cols="53" rows="3" class=" rounded col-md" ></textarea>
+                        <p id="pmensaje">Debe agregar un texto.</p>
                         </div>
                       
                         
@@ -117,7 +129,7 @@
                       <div class="btn-group border d-flex justify-content-end p-3 mt-5 bg-light">
                       
                       <button class="btn btn-secondary rounded mr-2">Cancel</button>
-                      <button class="btn btn-primary rounded">Send</button>
+                      <button type="submit" class="btn btn-primary rounded" id="enviar">Send</button>
                     </div>
 
                       
@@ -129,14 +141,12 @@
 
                       
                     
-                 
-                    
-
-                  </form>
+              
+                </form>
                 
 
-                </div>
-              </div>
+            </div>
+</div>
 
 
         
@@ -152,5 +162,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+
 </body>
 </html>
